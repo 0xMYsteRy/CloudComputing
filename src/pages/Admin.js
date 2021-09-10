@@ -53,7 +53,7 @@ const Admin = () => {
             <AmplifyAuthenticator>
                 <section>
                     <header className="form-header">
-                        <h3>Add New Vaccine</h3>
+                        <h3>Add a new Vaccine</h3>
                         <AmplifySignOut></AmplifySignOut>
                     </header>
                     <form className="form-wrapper" onSubmit={handleSubmit}>
@@ -91,7 +91,7 @@ const Admin = () => {
                                 <p><input
                                     name="author"
                                     type="text"
-                                    placeholder="Type the author's name"
+                                    placeholder="Type the company name"
                                     onChange={(e) => setBookDetails({ ...bookDetails, author: e.target.value })}
                                     required
                                 /></p>
@@ -101,13 +101,15 @@ const Admin = () => {
                                     <input
                                         name="price"
                                         type="text"
-                                        placeholder="What is the Price of the book (USD)"
+                                        placeholder="Vaccine price in (USD)"
                                         onChange={(e) => setBookDetails({ ...bookDetails, price: e.target.value })}
                                         required
                                     /></p>
                             </div>
+
+                            
                             <div className="featured-form">
-                                <p><label>Featured?</label>
+                                <p><label>Do you want vaccine to be in feature page?</label>
                                     <input type="checkbox"
                                         className="featured-checkbox"
                                         checked={bookDetails.featured}

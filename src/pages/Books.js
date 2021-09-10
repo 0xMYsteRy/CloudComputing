@@ -7,7 +7,7 @@ const Books = () => {
     const { books } = useContext(BookContext);
 
     if (!books.length) {
-        return <h3>No Books Available</h3>
+        return <h3>No Vaccine Available</h3>
     }
 
     return (
