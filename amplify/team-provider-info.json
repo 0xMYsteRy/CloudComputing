@@ -1,0 +1,20 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-myvaccine-prod-121048-authRole",
+            "UnauthRoleArn": "arn:aws:iam::547225591242:role/amplify-myvaccine-prod-121048-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::547225591242:role/amplify-myvaccine-prod-121048-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-myvaccine-prod-121048-deployment",
+            "UnauthRoleName": "amplify-myvaccine-prod-121048-unauthRole",
+            "StackName": "amplify-myvaccine-prod-121048",
+            "StackId": "arn:aws:cloudformation:us-east-2:547225591242:stack/amplify-myvaccine-prod-121048/794b9920-11f5-11ec-ace3-02e271d30868",
+            "AmplifyAppId": "d33t01fcqmjuzt"
+        },
+        "categories": {
+            "auth": {
+                "myvaccine928e1488": {}
+            }
+        }
+    }
+}
