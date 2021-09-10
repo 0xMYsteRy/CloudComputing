@@ -22,7 +22,7 @@ const Admin = () => {
             await API.graphql(graphqlOperation(createBook, { input: bookDetails }))
             setBookDetails({ title: "", description: "", image: "", author: "", price: "" })
         } catch (err) {
-            console.log('error creating todo:', err)
+            console.log('Generating a log error:', err)
         }
     }
 
@@ -53,7 +53,7 @@ const Admin = () => {
             <AmplifyAuthenticator>
                 <section>
                     <header className="form-header">
-                        <h3>Add New Book</h3>
+                        <h3>Add New Vaccine</h3>
                         <AmplifySignOut></AmplifySignOut>
                     </header>
                     <form className="form-wrapper" onSubmit={handleSubmit}>
@@ -66,28 +66,28 @@ const Admin = () => {
                         </div>
                         <div className="form-fields">
                             <div className="title-form">
-                                <p><label htmlFor="title">Title</label></p>
+                                <p><label htmlFor="title">Vaccine title</label></p>
                                 <p><input
                                     name="email"
                                     type="title"
-                                    placeholder="Type the title"
+                                    placeholder="Type the vaccine title"
                                     onChange={(e) => setBookDetails({ ...bookDetails, title: e.target.value })}
                                     required
                                 /></p>
                             </div>
                             <div className="description-form">
-                                <p><label htmlFor="description">Description</label></p>
+                                <p><label htmlFor="description">Vaccine Description</label></p>
                                 <p><textarea
                                     name="description"
                                     type="text"
                                     rows="8"
-                                    placeholder="Type the description of the book"
+                                    placeholder="Type the vaccine description "
                                     onChange={(e) => setBookDetails({ ...bookDetails, description: e.target.value })}
                                     required
                                 /></p>
                             </div>
                             <div className="author-form">
-                                <p><label htmlFor="author">Author</label></p>
+                                <p><label htmlFor="author">Company</label></p>
                                 <p><input
                                     name="author"
                                     type="text"
