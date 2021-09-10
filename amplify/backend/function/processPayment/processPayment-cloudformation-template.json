@@ -69,7 +69,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-myvaccine-prod-121048-deployment",
-					"S3Key": "amplify-builds/processPayment-66534f373465546e4e58-build.zip"
+					"S3Key": "amplify-builds/processPayment-4d6a786834376276376c-build.zip"
 				}
 			}
 		},
