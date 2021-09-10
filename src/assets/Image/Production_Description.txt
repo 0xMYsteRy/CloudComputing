@@ -1,0 +1,32 @@
+Pfizer-BioNTech Vaccine
+The Pfizer-BioNTech vaccine was 95% effective at preventing laboratory-confirmed infection ...
+BioNTech
+37
+
+Moderna Vaccine
+The Moderna COVID‑19 vaccine is used to provide protection against infection by the SARS-CoV-2 virus in order to prevent COVID‑19. The vaccine is given by intramuscular injection into the deltoid muscle.The initial course consists of two doses.The World Health Organization (WHO) recommends an interval of 28 days between doses
+NIAID and BARDA
+25.35
+
+Novavax
+In January 2020, Novavax announced development of a vaccine candidate, named NVX-CoV2373, to establish immunity to SARS-CoV-2. NVX-CoV2373 is a protein subunit vaccine that contains the spike protein of the SARS-CoV-2 virus.Novavax's work is in competition for vaccine development among dozens of other companies.
+Novavax, Inc.
+40
+
+Astra Zeneca
+AstraZeneca has a primary listing on the London Stock Exchange and is a constituent of the FTSE 100 Index. It has secondary listings on Nasdaq OMX Stockholm, Nasdaq New York, the Bombay Stock Exchange and on the National Stock Exchange of India.
+AstraZeneca plc 
+50
+
+Siropham
+The vaccine is given by intramuscular injection into the deltoid muscle. The initial course consists of two doses, and there is no evidence that a third booster dose dose is needed. The World Health Organization (WHO) recommends an interval of 3 to 4 weeks between doses.
+Beijing Bio-Institute of Biological Products
+32.1
+
+
+Pfizer+AstraZeneca
+The Pfizer-BioNTech vaccine was 95% effective at preventing laboratory-confirmed infection ...
+AstraZeneca has a primary listing on the London Stock Exchange and is a constituent of the FTSE 100 Index.
+BioNTech and AstraZeneca plc 
+65.7
+
