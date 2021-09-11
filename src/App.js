@@ -13,7 +13,11 @@ import BookDetails from "./pages/BookDetails";
 import Admin from './pages/Admin';
 
 // Components
-import Header from "./components/Header"
+import Header from "./components/Header";
+
+// Comunicate BOT
+import Communicate from "./Communicate/Communicate";
+
 
 // Amplify Configurations
 import awsExports from "./aws-exports";
@@ -24,6 +28,7 @@ const App = () => {
   return (
     <Router>
       <Header />
+      <Communicate />
       <Switch>
         <Route exact path="/">
           <Home />
