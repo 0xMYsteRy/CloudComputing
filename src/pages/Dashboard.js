@@ -5,6 +5,10 @@ import React from "react"
 import CountriesLine from "../components/Graphs/Line"
 import CountriesBar from "../components/Graphs/Bar"
 import CountriesHBar from "../components/Graphs/HBar"
+import Doughnut from "../components/Graphs/Doughnut"
+import SaigonPie from "../components/Graphs/SaigonPie";
+import HanoiPie from "../components/Graphs/HanoiPie";
+
 
 // For cards
 import { Grid, Card, CardActions, Typography, CardHeader } from '@material-ui/core'
@@ -327,6 +331,7 @@ export default function CountriesSummary() {
     </div>
   )
 }
+
 
 
 
