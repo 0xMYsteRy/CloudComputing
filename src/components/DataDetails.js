@@ -118,7 +118,7 @@ function DataDetails({ data }) {
           container
           direction="row"
           className={classes.gridBody}
-          spacing={2}
+          spacing={5}
           justify="space-evenly"
         >
 
@@ -139,7 +139,7 @@ function DataDetails({ data }) {
               >
                 <Grid item>
                   Total cases
-            </Grid>
+                </Grid>
                 <Grid item>
                   {data.cases || "NA"}
                 </Grid>
@@ -163,91 +163,8 @@ function DataDetails({ data }) {
                 justify="space-between"
               >
                 <Grid item>
-                  Deaths
-                  </Grid>
-                <Grid item>
-                  {data.deaths || "NA"}
-                </Grid>
-              </Grid>
-              <Grid item>
-                <DeathsProgress
-                  className={classes.margin}
-                  variant="determinate"
-                  color="secondary"
-                  value={progressData.deaths}
-                />
-              </Grid>
-            </Grid>
-
-            <Grid item xs>
-              <Grid
-                item
-                xs={12}
-                sm
-                container
-                justify="space-between"
-              >
-                <Grid item>
-                  Recovered
-            </Grid>
-                <Grid item>
-                  {data.total_recovered || "NA"}
-                </Grid>
-              </Grid>
-              <Grid item>
-                <RecoveredProgress
-                  className={classes.margin}
-                  variant="determinate"
-                  color="secondary"
-                  value={progressData.recovered}
-                />
-              </Grid>
-            </Grid>
-
-            <Grid item xs>
-              <Grid
-                item
-                xs={12}
-                sm
-                container
-                justify="space-between"
-              >
-                <Grid item>
-                  New deaths
-            </Grid>
-                <Grid item>
-                  {data.new_deaths || "NA"}
-                </Grid>
-              </Grid>
-              <Grid item>
-                <DeathsProgress
-                  className={classes.margin}
-                  variant="determinate"
-                  color="secondary"
-                  value={progressData.newDeaths}
-                />
-              </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid
-            item
-            container
-            direction="column"
-            xs={6}
-            spacing={1}
-          >
-            <Grid item xs>
-              <Grid
-                item
-                xs={12}
-                sm
-                container
-                justify="space-between"
-              >
-                <Grid item>
                   New cases
-            </Grid>
+                </Grid>
                 <Grid item>
                   {data.new_cases || "NA"}
                 </Grid>
@@ -271,10 +188,36 @@ function DataDetails({ data }) {
                 justify="space-between"
               >
                 <Grid item>
-                  Serious critical
-            </Grid>
+                  Recovered
+                </Grid>
                 <Grid item>
-                  {data.serious_critical || "NA"}
+                  {data.total_recovered || "NA"}
+                </Grid>
+              </Grid>
+              <Grid item>
+                <RecoveredProgress
+                  className={classes.margin}
+                  variant="determinate"
+                  color="secondary"
+                  value={progressData.recovered}
+                />
+              </Grid>
+            </Grid>
+
+
+            <Grid item xs>
+              <Grid
+                item
+                xs={12}
+                sm
+                container
+                justify="space-between"
+              >
+                <Grid item>
+                  Deaths
+                </Grid>
+                <Grid item>
+                  {data.deaths || "NA"}
                 </Grid>
               </Grid>
               <Grid item>
@@ -282,32 +225,7 @@ function DataDetails({ data }) {
                   className={classes.margin}
                   variant="determinate"
                   color="secondary"
-                  value={progressData.seriousCritical}
-                />
-              </Grid>
-            </Grid>
-
-            <Grid item xs>
-              <Grid
-                item
-                xs={12}
-                sm
-                container
-                justify="space-between"
-              >
-                <Grid item >
-                  Active cases
-                </Grid>
-                <Grid item>
-                  {data.active_cases || "NA"}
-                </Grid>
-              </Grid>
-              <Grid item>
-                <ActiveProgress
-                  className={classes.margin}
-                  variant="determinate"
-                  color="secondary"
-                  value={progressData.activeCases}
+                  value={progressData.deaths}
                 />
               </Grid>
             </Grid>
@@ -321,24 +239,22 @@ function DataDetails({ data }) {
                 justify="space-between"
               >
                 <Grid item>
-                  Cases per 1 M
+                  New deaths
                 </Grid>
                 <Grid item>
-                  {data.total_cases_per_1m_population || "NA"}
+                  {data.new_deaths || "NA"}
                 </Grid>
               </Grid>
               <Grid item>
-                <BorderLinearProgress
+                <DeathsProgress
                   className={classes.margin}
                   variant="determinate"
                   color="secondary"
-                  value={progressData.totalCasesPerM}
+                  value={progressData.newDeaths}
                 />
               </Grid>
-            </Grid>
-
+            </Grid>      
           </Grid>
-
         </Grid>
       </Paper>
     </Box>

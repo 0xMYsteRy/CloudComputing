@@ -23,9 +23,9 @@ function Map({ countries, casesType, center, zoom }) {
             // color={casesTypeColors[casesType].hex}
             color="#ff0000"
             fillColor="#ff0000"
-            fillOpacity={0.4}
+            fillOpacity={0.3}
             radius={
-              Math.sqrt(country['cases']) * 800
+              Math.sqrt(country['cases']) * 500
             }
           >
             <Popup>
