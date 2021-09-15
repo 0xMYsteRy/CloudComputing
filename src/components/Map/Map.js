@@ -1,6 +1,6 @@
 import React from "react";
 import { Map as LeafletMap, TileLayer, Circle, Popup } from "react-leaflet";
-import 'leaflet/dist/leaflet.css'
+import './leaflet/dist/leaflet.css'
 import "./Map.css";
 
 function Map({ countries, casesType, center, zoom }) {
