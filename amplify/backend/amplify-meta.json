@@ -1,0 +1,150 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-myvaccine-prod-121048-authRole",
+            "UnauthRoleArn": "arn:aws:iam::547225591242:role/amplify-myvaccine-prod-121048-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::547225591242:role/amplify-myvaccine-prod-121048-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-myvaccine-prod-121048-deployment",
+            "UnauthRoleName": "amplify-myvaccine-prod-121048-unauthRole",
+            "StackName": "amplify-myvaccine-prod-121048",
+            "StackId": "arn:aws:cloudformation:us-east-2:547225591242:stack/amplify-myvaccine-prod-121048/794b9920-11f5-11ec-ace3-02e271d30868",
+            "AmplifyAppId": "d33t01fcqmjuzt"
+        }
+    },
+    "auth": {
+        "myvaccine928e1488": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [],
+            "customAuth": false,
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myvaccine-prod-121048-deployment/amplify-cfn-templates/auth/myvaccine928e1488-cloudformation-template.yml",
+                "logicalId": "authmyvaccine928e1488"
+            },
+            "lastPushTimeStamp": "2021-09-14T13:57:54.169Z",
+            "output": {
+                "AppClientSecret": "1a1vkshfd2imp6vh07vhkqsn3es7a9dekh4cm4d0utimqqn09fvh",
+                "UserPoolId": "us-east-2_Ap07D1677",
+                "AppClientIDWeb": "5vil55mvacql1nqqulivsc4v33",
+                "AppClientID": "23r5olp576bfk4lr3ct3ai656b",
+                "IdentityPoolId": "us-east-2:3daaf292-3c57-45dc-b240-fd398749a9b3",
+                "IdentityPoolName": "myvaccine928e1488_identitypool_928e1488__prod",
+                "UserPoolName": "myvaccine928e1488_userpool_928e1488"
+            },
+            "lastPushDirHash": "6Uan6n3T4rfDjdUThOVxpTYp1AA="
+        }
+    },
+    "storage": {
+        "VaccineImages": {
+            "service": "S3",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myvaccine-prod-121048-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+                "logicalId": "storageVaccineImages"
+            },
+            "lastPushTimeStamp": "2021-09-14T13:57:54.173Z",
+            "output": {
+                "BucketName": "myvaccinef64cd17b5a7b40e6beb19db9206b2fc8121048-prod",
+                "Region": "us-east-2"
+            },
+            "lastPushDirHash": "lMn/kzWBKTaCcJtHAdUZ697cxdg="
+        }
+    },
+    "function": {
+        "processPayment": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda",
+            "dependsOn": [],
+            "lastBuildTimeStamp": "2021-09-10T15:06:42.216Z",
+            "lastPackageTimeStamp": "2021-09-10T15:06:42.910Z",
+            "distZipFilename": "processPayment-4d6a786834376276376c-build.zip",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myvaccine-prod-121048-deployment/amplify-cfn-templates/function/processPayment-cloudformation-template.json",
+                "logicalId": "functionprocessPayment"
+            },
+            "lastPushTimeStamp": "2021-09-14T13:57:54.175Z",
+            "output": {
+                "Region": "us-east-2",
+                "Arn": "arn:aws:lambda:us-east-2:547225591242:function:processPayment-prod",
+                "Name": "processPayment-prod",
+                "LambdaExecutionRole": "myvaccineLambdaRolea67b20ba-prod"
+            },
+            "lastPushDirHash": "ymy5vKq1XA/sk3ssWBQJH3B2VxE="
+        },
+        "createOrder": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda",
+            "dependsOn": [],
+            "lastBuildTimeStamp": "2021-09-10T15:33:23.577Z",
+            "lastPackageTimeStamp": "2021-09-10T15:33:23.757Z",
+            "distZipFilename": "createOrder-31333146685a62765637-build.zip",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myvaccine-prod-121048-deployment/amplify-cfn-templates/function/createOrder-cloudformation-template.json",
+                "logicalId": "functioncreateOrder"
+            },
+            "lastPushTimeStamp": "2021-09-14T13:57:54.176Z",
+            "output": {
+                "Region": "us-east-2",
+                "Arn": "arn:aws:lambda:us-east-2:547225591242:function:createOrder-prod",
+                "Name": "createOrder-prod",
+                "LambdaExecutionRole": "myvaccineLambdaRoleecdb56cb-prod"
+            },
+            "lastPushDirHash": "I5XAVV9MXcwkVT3itW6gwWGTPb4="
+        }
+    },
+    "api": {
+        "myvaccine": {
+            "service": "AppSync",
+            "providerPlugin": "awscloudformation",
+            "output": {
+                "authConfig": {
+                    "additionalAuthenticationProviders": [
+                        {
+                            "authenticationType": "API_KEY",
+                            "apiKeyConfig": {
+                                "description": "Guest user access to vaccines",
+                                "apiKeyExpirationDays": 365
+                            }
+                        }
+                    ],
+                    "defaultAuthentication": {
+                        "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+                        "userPoolConfig": {
+                            "userPoolId": "authmyvaccine928e1488"
+                        }
+                    }
+                },
+                "GraphQLAPIIdOutput": "ampgffvzvzgxzfxay3ocu6iide",
+                "GraphQLAPIEndpointOutput": "https://arqhnubiubhdzdyajwkvaealre.appsync-api.us-east-2.amazonaws.com/graphql",
+                "GraphQLAPIKeyOutput": "da2-sgpglx4lnngrnaabltfyunoqum"
+            },
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myvaccine-prod-121048-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+                "logicalId": "apimyvaccine"
+            },
+            "lastPushTimeStamp": "2021-09-14T13:57:54.177Z",
+            "lastPushDirHash": "l+jxwnVpytU+1/qzSC2rFkDnPYk="
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myvaccine-prod-121048-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2021-09-14T13:57:54.178Z",
+            "output": {
+                "S3BucketSecureURL": "https://myvaccine-20210910221342-hostingbucket-prod.s3.amazonaws.com",
+                "WebsiteURL": "http://myvaccine-20210910221342-hostingbucket-prod.s3-website.us-east-2.amazonaws.com",
+                "Region": "us-east-2",
+                "HostingBucketName": "myvaccine-20210910221342-hostingbucket-prod"
+            },
+            "lastPushDirHash": "9En2TuqOabdzEQ4s2I4DIsizU7c="
+        }
+    }
+}
